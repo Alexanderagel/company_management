@@ -6,25 +6,14 @@ public class EmployeTest {
 
     @Test
     public void testConstructorSetName(){
-        var empolye = new Employe("linus");
+        var empolye = new Employe("Linus");
 
         var expected = "Linus";
         var actual = empolye.getName();
-
+assertEquals(expected, actual );
     }
 
-    private String programmingLanguage;
 
-
-
-
-    public String getProgrammingLanguage() {
-        return programmingLanguage;
-    }
-
-    public void setProgrammingLanguage(String programmingLanguage) {
-        this.programmingLanguage = programmingLanguage;
-    }
 
     @Test
 

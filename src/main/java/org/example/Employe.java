@@ -3,8 +3,9 @@ package org.example;
 public class Employe extends Person {
 
 
-
     public Employe(String name) {
+    setName(name);
+
         this.name = name;
     }
 
@@ -12,15 +13,19 @@ public class Employe extends Person {
         return "Aaow!";
     }
 
-    public String getName() {
+    public String getName(){ return name;}
+
+    public String setName() {
         return name;
     }
 
     public void setName(String name) {
-        String firstCharacter = name.substring(0, 1).toUpperCase();
-        String rest = name.substring(1);
-        this.name = firstCharacter + rest;
+
+
+        this.name = capitalizeFisrLetter(name);
+
     }
+
 
     @Override
     public String eatFood() {
@@ -28,4 +33,16 @@ public class Employe extends Person {
 
 
     }
+
+    protected String capitalizeFisrLetter(String input) {
+        String firstCharacter = input.substring(0, 1).toUpperCase();
+        String rest = input.substring(1);
+        return firstCharacter + rest;
+
+    }
+
+
+
+
+
 }
